@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/idPBloading"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_centerInParent="true"
         />
 
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/idRLHome"
-        android:visibility="visible"
+        android:visibility="gone"
         >
         
         <ImageView
@@ -95,27 +95,31 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/idTVTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idTVTemperature"
             android:layout_below="@id/idLLedt"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:padding="5dp"
             android:text="23"
             android:textColor="@color/white"
-            android:textSize="70dp"
-            />
+            android:textSize="70dp" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/idIVIcon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_below="@id/idTVTemperature"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:src="@mipmap/ic_launcher"
-            />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:layout_width="match_parent"
@@ -128,10 +132,24 @@
             android:textColor="@color/white"
             android:layout_below="@id/idIVIcon"/>
 
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVWeatherInfo"
+            android:layout_width="match_parent"
+            android:layout_below="@id/idTVCondition"
+            android:layout_above="@id/idTvtext"
+            android:layout_height="10dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/idRVWeather"
+            android:id="@+id/idTvtext"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -141,26 +159,14 @@
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRVWeather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idRVWeather"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
             android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
-
-
-
-
-
-
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     </RelativeLayout>
-
-
-
-
-
-
 
 </RelativeLayout>

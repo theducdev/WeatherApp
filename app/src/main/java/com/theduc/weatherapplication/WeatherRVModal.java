@@ -41,4 +41,7 @@ public class WeatherRVModal {
     public void setWingSpeed(String wingSpeed) {
         this.wingSpeed = wingSpeed;
     }
+
+
+
 }
